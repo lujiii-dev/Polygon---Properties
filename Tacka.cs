@@ -21,6 +21,7 @@ namespace Polygon___Properties
             this.x = x;
             this.y = y;
         }
+
         public double d()
         {
             return Math.Sqrt(x * x + y * y);
