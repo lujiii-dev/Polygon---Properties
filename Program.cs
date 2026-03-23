@@ -12,12 +12,14 @@ namespace Polygon___Properties
         {
             //Nikola Misic
 
-            Tacka prva = new Tacka();
-            Tacka a = new Tacka(1, 2);
-            Tacka b = new Tacka(2, 3);
-            Vektor ab = new Vektor(a, b);
-            Tacka c = ab.Centriraj();
-            Console.WriteLine(c.d());
+            Tacka a = new Tacka(5, 3);
+            Tacka b = new Tacka(5, 5);
+            Tacka prva = new Tacka(3, 2);
+            Tacka druga = new Tacka(7, 6);
+            Vektor va = new Vektor(prva, druga);
+            Console.WriteLine(Ravan.SIS(va, a, b));
+
+            Console.ReadKey();
         }
     }
 }

@@ -8,25 +8,24 @@ namespace Polygon___Properties
 {
     internal class Vektor
     {
-        Tacka Pocetak, Kraj;
-
-        public Vektor(Tacka a, Tacka b)
+        public Tacka pocetak, kraj;
+        public Vektor(Tacka A, Tacka B)
         {
-            Pocetak = a;
-            Kraj = b;
+            pocetak = A;
+            kraj = B;
         }
         public Tacka Centriraj()
         {
-            Tacka Nova = new Tacka(Kraj.x - Pocetak.x, Kraj.y - Pocetak.y);
+            Tacka Nova = new Tacka(kraj.x - pocetak.x, kraj.y - pocetak.y);
             return Nova;
         }
-        public float SP(Vektor a, Vektor b)
+        public static double SP(Vektor a, Vektor b)
         {
             Tacka aC = a.Centriraj();
             Tacka bC = b.Centriraj();
             return aC.x * bC.x + aC.y * bC.y;
         }
-        public float VP(Vektor a, Vektor b)
+        public static double VP(Vektor a, Vektor b)
         {
             Tacka aC = a.Centriraj();
             Tacka bC = b.Centriraj();
