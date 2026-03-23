@@ -21,7 +21,8 @@ namespace Polygon___Properties
 
             //Poligon prvi = Poligon.unos();
             //prvi.snimi();
-            Poligon.stampa();
+            Poligon p = Poligon.ucitaj();
+            Poligon.stampa(p);
 
             Console.ReadKey();
         }
