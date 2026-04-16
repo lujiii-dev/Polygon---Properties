@@ -25,7 +25,10 @@ namespace Polygon___Properties
             // prvi.snimi();
             Poligon.stampa(prvi);
             Console.WriteLine("obim = {0}", prvi.obim());
-
+            
+            Tacka testTacka = new Tacka(3, 3);
+            
+            Console.WriteLine("Tacka unutar: {0}", prvi.tackaunutar(testTacka));
             Console.Read();
         }
     }
