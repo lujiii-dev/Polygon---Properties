@@ -25,13 +25,29 @@ namespace Polygon___Properties
             // prvi.snimi();
             //Poligon.stampa(prvi);
             //Console.WriteLine("obim = {0}", prvi.obim());
-            
+
             //Tacka testTacka = new Tacka(3, 3);
-            
+
             //Console.WriteLine("Tacka unutar: {0}", prvi.tackaUnutar(testTacka));
             //Console.Read();
 
+            /*
+            Poligon prvi = Poligon.unos();
+            Console.WriteLine("Da li je deltoid: {0}", prvi.proveriDeltoid());
+            Console.WriteLine("Da li je pravougaonik: {0}", prvi.proveriPravougaonik());
+            Console.WriteLine("Da li je pravougli trapez: {0}", prvi.proveriPravougliTrapez());
 
+            prvi = Poligon.unos();
+            Console.WriteLine("Da li je deltoid: {0}", prvi.proveriDeltoid());
+            Console.WriteLine("Da li je pravougaonik: {0}", prvi.proveriPravougaonik());
+            Console.WriteLine("Da li je pravougli trapez: {0}", prvi.proveriPravougliTrapez());
+            */
+
+            Poligon prvi = Poligon.unos();
+            Console.WriteLine("Da li je deltoid: {0}", prvi.proveriDeltoid());
+            Console.WriteLine("Da li je pravougaonik: {0}", prvi.proveriPravougaonik());
+            Console.WriteLine("Da li je pravougli trapez: {0}", prvi.proveriPravougliTrapez());
+            Console.Read();
         }
     }
 }

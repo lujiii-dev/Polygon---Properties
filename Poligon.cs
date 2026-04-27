@@ -162,7 +162,11 @@ namespace Polygon___Properties
                 duzine[i] = stranice[i].duzina();
             }
 
-            return (duzine[0] == duzine[2] && duzine[1] == duzine[3]);
+            bool check = false;
+            if (duzine[0] == duzine[3] && duzine[1] == duzine[2]) check = true;
+            if (duzine[0] == duzine[1] && duzine[2] == duzine[3]) check = true;
+
+            return check;
         }
         public bool proveriPravougaonik()
         {
@@ -174,9 +178,20 @@ namespace Polygon___Properties
             stranice[2] = new Vektor(teme[2], teme[3]);
             stranice[3] = new Vektor(teme[3], teme[0]);
 
+            double[] duzine = new double[4];
+            for (int i = 0; i < 4; i++)
+            {
+                duzine[i] = stranice[i].duzina();
+            }
+
+            bool check = false;
+            if (duzine[0] == duzine[3] && duzine[1] == duzine[2]) check = true;
+            if (duzine[0] == duzine[1] && duzine[2] == duzine[3]) check = true;
+
             if (Vektor.SP(stranice[0], stranice[1]) == 0 &&
                 Vektor.SP(stranice[1], stranice[2]) == 0 &&
-                Vektor.SP(stranice[2], stranice[3]) == 0)
+                Vektor.SP(stranice[2], stranice[3]) == 0 &&
+                check == true)
                 return true;
             else return false;
         }
@@ -192,8 +207,8 @@ namespace Polygon___Properties
 
             int brojac = 0;
 
-            for (int i = 0; i < 3; i++)
-                if (Vektor.SP(stranice[i], stranice[i + 1]) == 0) brojac++;
+            for (int i = 0; i < 4; i++)
+                if (Vektor.SP(stranice[i], stranice[(i + 1) % 3]) == 0) brojac++;
 
             if (brojac == 2) return true;
             else return false;
